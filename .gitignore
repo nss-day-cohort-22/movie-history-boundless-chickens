@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+bin
+obj
+*.db
+*.sqlite3
+.vscode
+build
+.eslintrc.json
+node_modules
