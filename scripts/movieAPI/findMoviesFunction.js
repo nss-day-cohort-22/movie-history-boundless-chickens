@@ -24,7 +24,7 @@ const findMoviesFunction = function () {
               Release Date: ${noUndefined[i].release_date}
               </h1>
               <img src='https://image.tmdb.org/t/p/original${noUndefined[i].poster_path}'><br>
-              <button id='${noUndefined[i].id}'>Add To Watchlist </button>
+              <button id='selectMovie!${noUndefined[i].id}'>Add To Watchlist </button>
             </div>`
 					}
 
