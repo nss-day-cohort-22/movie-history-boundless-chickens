@@ -18,7 +18,7 @@ const addToWatch = function () {
 						"img": {value:`<img src='https://image.tmdb.org/t/p/original${movies.poster_path}'>`}
 					})
 					const userMoviesObject = Object.create(null,{
-						"userMovieId":{value:"hey"},
+						"userMovieId":{value:`${auth.activeUser.uid+"!"+movieUID}`},
 						"userId":{value: `${auth.activeUser.uid}`},
 						"movieId":{value: `${movieUID}`},
 						"rating": {

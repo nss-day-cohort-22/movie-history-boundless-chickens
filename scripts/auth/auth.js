@@ -60,6 +60,22 @@ const auth = Object.create(null, {
 				})
 			})
 		}
+	},
+	"register":{
+		value: function () {
+			$("#register_button").on("click",()=>{
+				const email = $("#email_input").val()
+				const password = $("#password_input").val()
+				
+				//Clear the fields
+				$("#email_input").val("")
+				$("#password_input").val("")
+
+				const promise = firebase.auth().createUserWithEmailAndPassword(email, password) 
+				promise.then(user => console.log(user))
+					.catch(e => console.log(e.message))
+			})
+		}
 	}
 })
 
