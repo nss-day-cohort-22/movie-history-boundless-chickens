@@ -1,0 +1,28 @@
+{
+  "Users":{
+    "user1": {
+      "UserId":"bhdjfgdufhjnsd",
+      "Email":"email@email.com",
+      "Password": "********"
+    },
+    "user2":{},
+    "user3": {}
+  },
+  "UserMovies":{
+    "UserMovieID": {
+      "UserId":"bhdjfgdufhjnsd",
+      "MoviesTrackedId":"api's id"
+    },
+    "Match2": {}
+  },
+  "MoviesTracked": {
+    "Toy Story":{
+      "Movie Id":"(api's id?)",
+      "title" : "",
+      "year released":"2017",
+      "actors": "ted",
+      "poster":"cool picture"
+    },
+    "Another movie": {}
+  }
+}

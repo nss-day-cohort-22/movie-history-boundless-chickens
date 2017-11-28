@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+  <nav id="navigation" >
+    <li>Find New Movies</li>
+    <li>Search Your Movies</li>
+    <button id="logout_button">Logout</button>    
+  </nav>
+
+  <section id="mainContent_Section" class="hidden">
+    <p>HEllo wURld</p>
+  </section>
+
+  <section id="loginAndRegister_section">
+    <form>
+      <input type="email" id="email_input" placeholder="Email@email.com">
+      <input type="password" id="password_input" placeholder="Password">
+    </form>
+    <div>
+      <button id="logIn_button">Log in</button>
+      <button id="register_button">Register</button>      
+    </div>
+  </section>
   
 </body>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous"></script>
 <script src="build/bundle.js"></script>
 </html>
