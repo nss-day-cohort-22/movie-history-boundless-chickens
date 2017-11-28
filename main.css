@@ -1,3 +1,38 @@
 .hidden {
   display:none;
 }
+
+#navigation ul{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  background-color: rgb(83,126,168);
+  margin: -8px -8px 3em -8px; 
+}
+
+#navigation li  {
+  list-style-type: none;
+  font-size: 3em;
+  flex-direction: column;
+  color:rgb(249,230,37);
+  text-decoration:none;
+}
+
+#navigation li:active {
+  transform: scaleX(1.1);
+}
+
+#navigation li:hover {
+  color: rgb(250,249,253);
+  cursor: pointer;
+}
+
+.image-container img {
+  height:20em;
+  width:20em;
+}
+
+#moviesFromSearch_section{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

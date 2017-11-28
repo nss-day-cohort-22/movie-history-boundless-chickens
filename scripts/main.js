@@ -1,5 +1,6 @@
 const auth = require("./auth/auth")
-// const logout = require("./auth/logout")
+const newMoviesEvent = require("./movieAPI/findMoviesSection")
 
 auth.init()
 auth.logout()
+newMoviesEvent()

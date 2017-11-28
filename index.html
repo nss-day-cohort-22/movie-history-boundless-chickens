@@ -5,14 +5,29 @@
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-  <nav id="navigation" >
-    <li>Find New Movies</li>
-    <li>Search Your Movies</li>
-    <button id="logout_button">Logout</button>    
+  <nav id="navigation" class="hidden" >
+    <ul>
+      <li id="findNewMovies_li">Find New Movies</li>
+      <li id="searchYourMovies_li">Search Your Movies</li>
+      <li id="logout_button">Logout</li>
+    </ul>    
   </nav>
 
   <section id="mainContent_Section" class="hidden">
-    <p>HEllo wURld</p>
+    <article id="landingWelcome_article">
+    </article>
+
+    <article id="searchYourMovies_article" class="hidden">
+      <p>Your Movies</p>
+    </article>
+
+    <article id="findNewMovies_article" class="hidden">
+      <p>NEw movies</p>
+      <input type="text" placeholder="search movies" id="search-movie">
+      <section id="moviesFromSearch_section">
+      </section>
+    </article>
+
   </section>
 
   <section id="loginAndRegister_section">
