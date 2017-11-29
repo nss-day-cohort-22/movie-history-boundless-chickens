@@ -1,5 +1,6 @@
 const firebase = require("firebase")
 const observe = require("./observe")
+const dbRef = require("./../universal/dbRequestFactory")
 
 var config = {
 	apiKey: "AIzaSyDJN0A1DT5JPuial0zWfTH69HMziv1WUAI",
@@ -58,6 +59,28 @@ const auth = Object.create(null, {
 					console.log("error")
 				// An error happened.
 				})
+			})
+		}
+	},
+	"register":{
+		value: function () {
+			$("#register_button").on("click",()=>{
+				const email = $("#email_input").val()
+				const password = $("#password_input").val()
+				
+				//Clear the fields
+				$("#email_input").val("")
+				$("#password_input").val("")
+
+				const promise = firebase.auth().createUserWithEmailAndPassword(email, password) 
+				promise.then((user) => { console.log(user)
+					const registeredUser = {
+						"UID": `${user.uid}`,
+						"Email": `${user.email}`
+					}
+					dbRef.add(registeredUser, "Users")
+				})
+					.catch(e => console.log(e.message))
 			})
 		}
 	}
