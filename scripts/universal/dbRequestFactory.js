@@ -9,9 +9,9 @@ const requestFactory = Object.create(null, {
 		writable: true
 	},
 	"all": {
-		value: function () {
+		value: function (areaInDb) {
 			return $.ajax({
-				"url": `${firebaseURL}/.json`,
+				"url": `${firebaseURL+areaInDb}/.json`,
 				"method": "GET"
 			}).then(articles => {
 				this.cache = Object.keys(articles)
