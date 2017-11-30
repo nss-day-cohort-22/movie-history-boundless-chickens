@@ -28,7 +28,6 @@ const displayUnwatched = function () {
 				//html representation of the relation between the usersMoviesUnwatchedInfo and the unwatchedUserMovies
 				let htmlBuild = "<section id='displayMovies_section'>"
 				unwatchedUserMovies.forEach((currentUserMovie)=>{
-					debugger
 					let currentUsersMoviesMovieInfo = usersMoviesUnwatchedInfo.find((currentObjectInfo)=>{
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
@@ -41,10 +40,10 @@ const displayUnwatched = function () {
 					<button id='delete!${currentUserMovie.id}'>Remove</button>
 					<section id="${currentUserMovie.userMovieId}">
 						<span class="fa fa-star " id="1star!${currentUserMovie.id}"></span>
-						<span class="fa fa-star " id="2star!${currentUserMovie.id}"></option>
-						<span class="fa fa-star " id="3star!${currentUserMovie.id}"></option>
-						<span class="fa fa-star " id="4star!${currentUserMovie.id}"></option>
-						<span class="fa fa-star " id="5star!${currentUserMovie.id}"></option>
+						<span class="fa fa-star " id="2star!${currentUserMovie.id}"></span>
+						<span class="fa fa-star " id="3star!${currentUserMovie.id}"></span>
+						<span class="fa fa-star " id="4star!${currentUserMovie.id}"></span>
+						<span class="fa fa-star " id="5star!${currentUserMovie.id}"></span>
 				  </section>
 				</div>								
 				`
