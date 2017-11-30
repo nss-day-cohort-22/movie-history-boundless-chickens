@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Document</title>
   <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.css">
+
 </head>
+
 <body>
-  <nav id="navigation" class="hidden" >
+  <nav id="navigation" class="hidden">
     <ul>
       <li id="findNewMovies_li">Find New Movies</li>
       <li id="searchYourMovies_li">Search Your Movies</li>
       <li id="logout_button">Logout</li>
-    </ul>    
+    </ul>
   </nav>
 
   <section id="mainContent_Section" class="hidden">
@@ -19,7 +23,7 @@
 
     <article id="searchYourMovies_article" class="hidden">
       <p>Your Movies</p>
-    
+
       <button id="watchedMovies">Watched</button>
       <button id="unwatchedMovies">Unwatched</button>
       <p id="watchedMoviesDisplay">watched shows here</p>
@@ -35,22 +39,41 @@
 
   </section>
 
-  <section id="loginAndRegister_section">
+  <div id="loginAndRegister_section">
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <div class="card">
+          <div class="card-content">
+            <form>
+              <h4 class="center">Login</h4>
+              <div class="input-field">
+                <input type="email" id="email_input" placeholder="Email@email.com">
+              </div>
+              <div class="input-field">
+                <input type="password" id="password_input" placeholder="Password">
+              </div>
+            </form>
+            <button id="logIn_button" class="btn-large z-depth-0">Log in</button>
+            <button id="register_button" class="btn-large z-depth-0">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <section id="loginAndRegister_section">
     <form>
       <input type="email" id="email_input" placeholder="Email@email.com">
       <input type="password" id="password_input" placeholder="Password">
     </form>
     <div>
       <button id="logIn_button">Log in</button>
-      <button id="register_button">Register</button>      
+      <button id="register_button">Register</button>
     </div>
-  </section>
-  
+  </section> -->
+
 </body>
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-<script
-src="https://code.jquery.com/jquery-3.2.1.js"
-integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-crossorigin="anonymous"></script>
+
 <script src="build/bundle.js"></script>
+
 </html>
