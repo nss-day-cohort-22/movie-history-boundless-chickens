@@ -71,7 +71,7 @@ const rateYourMovie = function () {
 			let secondStar = `2star!${optionUID}`
 			document.getElementById(secondStar).classList.add("checked")
 			let thirdStar = `3star!${optionUID}`
-			document.getElementById(secondStar).classList.add("checked")
+			document.getElementById(thirdStar).classList.add("checked")
 			let fourthStar = `4star!${optionUID}`
 			document.getElementById(fourthStar).classList.add("checked")
 			const fiveStringy = 5
