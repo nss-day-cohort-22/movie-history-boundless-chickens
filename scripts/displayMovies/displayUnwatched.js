@@ -28,7 +28,7 @@ const displayUnwatched = function () {
 				//html representation of the relation between the usersMoviesUnwatchedInfo and the unwatchedUserMovies
 				let htmlBuild = "<section id='displayMovies_section'>"
 				unwatchedUserMovies.forEach((currentUserMovie)=>{
-				
+
 					let currentUsersMoviesMovieInfo = usersMoviesUnwatchedInfo.find((currentObjectInfo)=>{
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
@@ -39,14 +39,13 @@ const displayUnwatched = function () {
 					<p>Rating : ${currentUserMovie.rating}</p>
 					<p class='image-container'>${currentUsersMoviesMovieInfo.img}</p>
 					<button id='delete!${currentUserMovie.id}'>Remove</button>
-					<select id="${currentUserMovie.userMovieId}">
-					  <option value="" selected disabled hidden>Rate This Film</option>
-						<option value="1" id="1star_${currentUsersMoviesMovieInfo.movieTitle}">1 Star</option>
-						<option value="2" id="2star_${currentUsersMoviesMovieInfo.movieTitle}">2 Star</option>
-						<option value="3" id="3star_${currentUsersMoviesMovieInfo.movieTitle}">3 Star</option>
-						<option value="4" id="4star_${currentUsersMoviesMovieInfo.movieTitle}">4 Star</option>
-						<option value="5" id="5star_${currentUsersMoviesMovieInfo.movieTitle}">5 Star</option>
-				  </select>
+					<section id="${currentUserMovie.userMovieId}">
+						<span class="fa fa-star " id="1star!${currentUserMovie.id}"></span>
+						<span class="fa fa-star " id="2star!${currentUserMovie.id}"></option>
+						<span class="fa fa-star " id="3star!${currentUserMovie.id}"></option>
+						<span class="fa fa-star " id="4star!${currentUserMovie.id}"></option>
+						<span class="fa fa-star " id="5star!${currentUserMovie.id}"></option>
+				  </section>
 				</div>
 				`
 				})
