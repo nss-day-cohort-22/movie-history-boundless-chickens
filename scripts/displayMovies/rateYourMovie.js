@@ -78,6 +78,7 @@ const rateYourMovie = function () {
 			dbReference.replace(fiveStringy,optionUID,"UserMovies","rating" )
 			alert("Movie Added To Watched List Rated: 5")
 		}
+
 	})
 }
 

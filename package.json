@@ -20,9 +20,26 @@
     "grunt": "^1.0.1",
     "grunt-browserify": "^5.2.0",
     "grunt-contrib-watch": "^1.0.0",
-    "gruntify-eslint": "^4.0.0"
+    "gruntify-eslint": "^4.0.0",
+    "browserify": "^14.5.0",
+    "browserify-shim": "^3.8.14"
   },
   "dependencies": {
-    "firebase": "^4.6.2"
+    "firebase": "^4.6.2",
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.2"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "materialize": "./node_modules/materialize-css/dist/js/materialize.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "materialize": "materialize"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
   }
 }

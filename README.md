@@ -1,27 +1,31 @@
-# Movie History
-
-You will be split up into teams, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings.
-* https://www.themoviedb.org
-* Request an api key
-
-## Requirements
-
-1. Must have the ability to register a user in Firebase
-1. Must have the ability to log in
-1. You must use Firebase to store movies
-1. You must be able to add movies
-1. You must be able to remove movies
-1. Each movie must have the following properties
-   1. Movie name
-   1. Year released
-   1. List of major actors
-   1. Movie poster, if available
-   1. An integer rating of 1-5
-   1. A boolean value that, if true, means that you have watched the movie
-1. Use Grunt to automate all the tasks needed during development.
-1. For the layout, we suggest Bootstrap, but if you want to stretch your legs, you can try [Materialize](http://materializecss.com/).
-1. Use of project tickets and features
-
-## Mockup
-
-Review the [basic design](https://app.moqups.com/chortlehoort/uGBbLbK46Y/view/page/a3a0e7bf6) and ask questions to your product owner for clarification, or ideas on features.
+1. git clone repository
+2. npm install
+3. firebase install
+4.1. eslint install
+4.2 create an eslint json file
+5. run grunt to create bundle in your build folder
+6. run httpserver
+7. register a new user
+8. You will be logged in
+9. create a git ignore
+add the following to your new gitignore ==
+"node_modules
+bower_components
+__pycache__
+*.pyc
+bin
+obj
+*.db
+*.sqlite3
+.vscode
+build
+.DS_Store
+.eslintrc.json"
+10. once logged in you will see a welcome message that greets you by your email
+11. click on find movies and search for any movies you'd like, the API queries after 3 keyups
+12. click the button under the chosen movie to add to watchlist
+13. once movies are added click on the "search your movies" and click the unwatched button, your movies that were added previously will be displayed here
+15. From the unwatched tab you can rate a movie or remove it from your unwatched list. Once a movie is rated, it can be modified up until you click out of the unwatched movie tab
+16. Under watched movies you will see the movies you have watched with their corresponding rating, these can be removed as well .
+17. log out will log your current user out and redirect you to the login form.
+18. ---side note: If you add a movie but cannot see it in your unwatched list, it means the API did not provide adequate information and it could not be added.
