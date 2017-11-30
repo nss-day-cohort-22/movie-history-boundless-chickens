@@ -37,7 +37,7 @@ const displayWatched = function () {
 				<div class='movieDisplay_div' id="${currentUserMovie.id}">
 					<p>${currentUsersMoviesMovieInfo.movieTitle}</p>
 					<p>${currentUsersMoviesMovieInfo.cast}</p>
-					<p>Rating : ${currentUserMovie.rating}</p>
+					<p class="ratingStyle"><strong>Rating : ${currentUserMovie.rating}</strong></p>
 					<p class='image-container'>${currentUsersMoviesMovieInfo.img}</p>
 					<button id="delete!${currentUserMovie.id}">Remove</button>
 				</div>								
