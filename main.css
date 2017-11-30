@@ -2,7 +2,7 @@
   display:none;
 }
 
-/* #navigation ul{
+#navigation ul{
   display: flex;
   text-align: center;
   justify-content: space-around;
@@ -25,7 +25,7 @@
 #navigation li:hover {
   color: rgb(250,249,253);
   cursor: pointer;
-} */
+}
 
 .image-container img {
   height:20em;

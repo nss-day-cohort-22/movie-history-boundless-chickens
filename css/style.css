@@ -45,9 +45,7 @@ nav {
   border-radius: 40px; */
 }
 
-.row {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+.checked {
+  color:orange;
 }
 
