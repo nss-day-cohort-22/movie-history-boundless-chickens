@@ -17,7 +17,7 @@ const displayWatched = function () {
 					watchedUserMovies.push(currentMovie)
 				}
 			}
-			console.log(watchedUserMovies, "watched")
+			// console.log(watchedUserMovies, "watched")
 			// filter through the movies to gather only ones the user has watched into this new array
 			dbRequestFactory.all("Movies").then((movieData)=>{
 				let usersMoviesWatchedInfo = []
@@ -27,7 +27,7 @@ const displayWatched = function () {
 					})
 					usersMoviesWatchedInfo.push(foundWatchedOfUser)
 				})
-				console.log(usersMoviesWatchedInfo)
+				// console.log(usersMoviesWatchedInfo)
 				//At this point the usersMovies array contains all of the movies the user has watched 
 				//html representation of the relation between the usersMoviesWatchedInfo and the watchedUserMovies
 				let htmlBuild = "<section id='displayWatchedMovies_section'>"
@@ -36,12 +36,12 @@ const displayWatched = function () {
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
 					htmlBuild += 	`
-				<div class='movieDisplay_div'>
+				<div class='movieDisplay_div' id="${currentUserMovie.id}">
 					<p>${currentUsersMoviesMovieInfo.movieTitle}</p>
 					<p>${currentUsersMoviesMovieInfo.cast}</p>
 					<p>Rating : ${currentUserMovie.rating}</p>
 					<p class='image-container'>${currentUsersMoviesMovieInfo.img}</p>
-					<button id="${currentUserMovie.id}">Remove</button>
+					<button id="delete!${currentUserMovie.id}">Remove</button>
 				</div>								
 				`
 				})

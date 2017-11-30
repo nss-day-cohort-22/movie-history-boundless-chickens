@@ -15,7 +15,7 @@ const displayUnwatched = function () {
 					unwatchedUserMovies.push(currentMovie)
 				}
 			}
-			console.log(unwatchedUserMovies, "unwatched")
+			// console.log(unwatchedUserMovies, "unwatched")
 			// filter through the movies to gather only ones the user has watched into this new array
 			dbRequestFactory.all("Movies").then((movieData)=>{
 				let usersMoviesUnwatchedInfo = []
@@ -25,7 +25,7 @@ const displayUnwatched = function () {
 					})
 					usersMoviesUnwatchedInfo.push(foundUnwatchedOfUser)
 				})
-				console.log(usersMoviesUnwatchedInfo)
+				// console.log(usersMoviesUnwatchedInfo)
 				//At this point the usersMovie array contains all of the movies the user has not watched 
 				//html representation of the relation between the usersMoviesUnwatchedInfo and the unwatchedUserMovies
 				let htmlBuild = "<section id='displayMovies_section'>"
@@ -34,12 +34,12 @@ const displayUnwatched = function () {
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
 					htmlBuild += 	`
-				<div class='movieDisplay_div'>
+				<div class='movieDisplay_div' id="${currentUserMovie.id}">
 					<p>${currentUsersMoviesMovieInfo.movieTitle}</p>
 					<p>${currentUsersMoviesMovieInfo.cast}</p>
 					<p>Rating : ${currentUserMovie.rating}</p>
 					<p class='image-container'>${currentUsersMoviesMovieInfo.img}</p>
-					<button id='${currentUserMovie.id}'>Remove</button>
+					<button id='delete!${currentUserMovie.id}'>Remove</button>
 					<select id="${currentUserMovie.userMovieId}">
 					  <option value="" selected disabled hidden>Rate This Film</option>
 						<option value="1" id="1star_${currentUsersMoviesMovieInfo.movieTitle}">1 Star</option>
