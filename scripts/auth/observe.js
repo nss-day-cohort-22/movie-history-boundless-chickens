@@ -11,7 +11,7 @@ const observer = Object.create(null, {
 					$("#mainContent_Section").removeClass("hidden")
 					$("#loginAndRegister_section").addClass("hidden")
 					$("#landingWelcome_article").removeClass("hidden")
-					$("#landingWelcome_article").html(`Welcome <strong>${auth.activeUser.email}</strong>`)
+					$("#landingWelcome_article").html(`<h1>Welcome <strong>${auth.activeUser.email}</strong></h1>`)
 					//make sure these don't display until clicked
 					$("#findNewMovies_article").addClass("hidden")
 					$("#searchYourMovies_article").addClass("hidden")
@@ -19,7 +19,7 @@ const observer = Object.create(null, {
 					console.log("not logged in")
 					$("#loginAndRegister_section").removeClass("hidden")
 					$("#mainContent_Section").addClass("hidden")
-					$("#navigation").addClass("hidden")					
+					$("#navigation").addClass("hidden")
 					auth.activeUser = null
 				}
 			})
