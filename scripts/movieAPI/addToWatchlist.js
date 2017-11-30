@@ -4,7 +4,7 @@ const auth = require("./../auth/auth")
 const dbRequest = require("./../universal/dbRequestFactory")
 
 const addToWatch = function () {
-	document.addEventListener("click", (event) => {
+	document.addEventListener("click",(event) =>{
 		if (event.target.id.startsWith("selectMovie!")) {
 			let movieUID = event.target.id.split("!")[1]
 			// make second call to get extra information on the movie a user clicks to add to their watchlist
@@ -29,6 +29,7 @@ const addToWatch = function () {
 
 					dbRequest.add(movieObject, "Movies")
 					dbRequest.add(userMoviesObject, "UserMovies")
+					alert("Movie Added!!")
 					console.log(movieObject)
 					console.log(userMoviesObject)
 				})

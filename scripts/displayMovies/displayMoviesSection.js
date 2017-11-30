@@ -1,4 +1,3 @@
-const displayYourMovies = require("./displayYourMovies")
 const displayWatched = require("./displayWatched")
 const displayUnwatched = require("./displayUnwatched")
 
