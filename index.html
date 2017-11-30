@@ -3,19 +3,33 @@
 
 <head>
   <title>Document</title>
-  <link rel="stylesheet" href="./main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.css">
-
+  <!-- <link rel="stylesheet" href="./main.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <nav id="navigation" class="hidden">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Movie Chicken</a>
+      <ul class="right">
+        <li id="findNewMovies_li">Find New Movies</li>
+        <li class="divider"> </li>
+        <li id="searchYourMovies_li">Search Your Movies</li>
+        <li>
+          <a id="logout_button" class="waves-effect waves-light btn">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <nav id="navigation" class="hidden">
     <ul>
       <li id="findNewMovies_li">Find New Movies</li>
       <li id="searchYourMovies_li">Search Your Movies</li>
       <li id="logout_button">Logout</li>
     </ul>
-  </nav>
+  </nav> -->
 
   <section id="mainContent_Section" class="hidden">
     <article id="landingWelcome_article">
@@ -31,11 +45,25 @@
     </article>
 
     <article id="findNewMovies_article" class="hidden">
+      <div class="row">
+        <div class="col s12 m6 offset-m3">
+          <div class="input-field">
+            <input id="search-movie" type="search" placeholder="Search Movies">
+          </div>
+        </div>
+      </div>
+      <section id="moviesFromSearch_section"></section>
+    </article>
+
+
+
+
+    <!-- <article id="findNewMovies_article" class="hidden">
       <p>NEw movies</p>
       <input type="text" placeholder="search movies" id="search-movie">
       <section id="moviesFromSearch_section">
       </section>
-    </article>
+    </article> -->
 
   </section>
 
