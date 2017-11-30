@@ -32,6 +32,7 @@ const displayWatched = function () {
 					let currentUsersMoviesMovieInfo = usersMoviesWatchedInfo.find((currentObjectInfo) => {
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
+
 					htmlBuild += `
 					<div class='movieDisplay_div' id="${currentUserMovie.id}">
 					<div class="row">
@@ -54,6 +55,8 @@ const displayWatched = function () {
 				</div>
 					`
 
+
+					
 				})
 				htmlBuild += "</section>"
 				$("#watchedMoviesDisplay").html(htmlBuild)

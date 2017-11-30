@@ -21,10 +21,7 @@ nav {
 }
 
 
-/* .movieDisplay_div{
-  border:2px black solid;
-  text-align: center;
-} */
+
 
 #displayWatchedMovies_section,
 #displayMovies_section {
@@ -53,6 +50,10 @@ nav {
   /* border: 1px solid #9e9e9e;
   border-radius: 40px; */
 }
+
+
+
+
 .ratingStyle {
   color:orange;
 }

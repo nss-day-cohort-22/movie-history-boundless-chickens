@@ -30,6 +30,7 @@ const displayUnwatched = function () {
 					let currentUsersMoviesMovieInfo = usersMoviesUnwatchedInfo.find((currentObjectInfo) => {
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
+
 					htmlBuild += `
 					<div class='movieDisplay_div' id="${currentUserMovie.id}">
 					<div class="row">
@@ -62,6 +63,9 @@ const displayUnwatched = function () {
 					</div>
 				</div>
                 `
+
+
+					
 
 				})
 				htmlBuild += "</section>"
