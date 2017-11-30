@@ -53,7 +53,7 @@ const requestFactory = Object.create(null, {
 			return firebase.auth().currentUser.getIdToken(true)
 				.then(idToken => {
 					return $.ajax({
-						"url": `${firebaseURL +areaInDb}/${id}/.json`,
+						"url": `${firebaseURL +areaInDb}/${id}/.json?auth=${idToken}`,
 						"method": "DELETE"
 					})
 				}).catch(function(error) {

@@ -15,7 +15,6 @@ const displayUnwatched = function () {
 					unwatchedUserMovies.push(currentMovie)
 				}
 			}
-			// console.log(unwatchedUserMovies, "unwatched")
 			// filter through the movies to gather only ones the user has watched into this new array
 			dbRequestFactory.all("Movies").then((movieData)=>{
 				let usersMoviesUnwatchedInfo = []
@@ -25,11 +24,11 @@ const displayUnwatched = function () {
 					})
 					usersMoviesUnwatchedInfo.push(foundUnwatchedOfUser)
 				})
-				// console.log(usersMoviesUnwatchedInfo)
 				//At this point the usersMovie array contains all of the movies the user has not watched 
 				//html representation of the relation between the usersMoviesUnwatchedInfo and the unwatchedUserMovies
 				let htmlBuild = "<section id='displayMovies_section'>"
 				unwatchedUserMovies.forEach((currentUserMovie)=>{
+					debugger
 					let currentUsersMoviesMovieInfo = usersMoviesUnwatchedInfo.find((currentObjectInfo)=>{
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
