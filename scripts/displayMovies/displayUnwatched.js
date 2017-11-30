@@ -7,7 +7,7 @@ const displayUnwatched = function () {
 		$("#watchedMoviesDisplay").addClass("hidden")
 		$("#unwatchedMoviesDisplay").removeClass("hidden")
 		dbRequestFactory.all("UserMovies").then((database) => {
-		// create 2 empty arrays to push unwatched and watched movies into 
+		// create 2 empty arrays to push unwatched and watched movies into
 			let unwatchedUserMovies = []
 			for (let i = 0; i < database.length; i++) {
 				const currentMovie = database[i]
@@ -24,11 +24,11 @@ const displayUnwatched = function () {
 					})
 					usersMoviesUnwatchedInfo.push(foundUnwatchedOfUser)
 				})
-				//At this point the usersMovie array contains all of the movies the user has not watched 
+				//At this point the usersMovie array contains all of the movies the user has not watched
 				//html representation of the relation between the usersMoviesUnwatchedInfo and the unwatchedUserMovies
 				let htmlBuild = "<section id='displayMovies_section'>"
 				unwatchedUserMovies.forEach((currentUserMovie)=>{
-					debugger
+				
 					let currentUsersMoviesMovieInfo = usersMoviesUnwatchedInfo.find((currentObjectInfo)=>{
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
@@ -47,19 +47,19 @@ const displayUnwatched = function () {
 						<option value="4" id="4star_${currentUsersMoviesMovieInfo.movieTitle}">4 Star</option>
 						<option value="5" id="5star_${currentUsersMoviesMovieInfo.movieTitle}">5 Star</option>
 				  </select>
-				</div>								
+				</div>
 				`
 				})
 				htmlBuild +="</section>"
 				$("#unwatchedMoviesDisplay").html(htmlBuild)
 			})
-		})   
+		})
 	})
-	
-	
+
+
 }
 
 module.exports = displayUnwatched
-	
+
 
 

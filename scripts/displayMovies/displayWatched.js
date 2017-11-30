@@ -32,15 +32,29 @@ const displayWatched = function () {
 					let currentUsersMoviesMovieInfo = usersMoviesWatchedInfo.find((currentObjectInfo) => {
 						return currentObjectInfo.movieId === currentUserMovie.movieId
 					})
-					htmlBuild += 	`
-				<div class='movieDisplay_div' id="${currentUserMovie.id}">
-					<p>${currentUsersMoviesMovieInfo.movieTitle}</p>
-					<p>${currentUsersMoviesMovieInfo.cast}</p>
-					<p>Rating : ${currentUserMovie.rating}</p>
-					<p class='image-container'>${currentUsersMoviesMovieInfo.img}</p>
-					<button id="delete!${currentUserMovie.id}">Remove</button>
-				</div>
-				`
+					debuger
+					htmlBuild += `
+					<div class="movieDisplay_div" id="${currentUserMovie.id}">
+					<div class="row">
+						<div class="col s12 m6">
+							<div class="card small">
+								<div class="card-image">
+								<p class='image-container'>${currentUsersMoviesMovieInfo.img}</p>
+									<span class="card-title">${currentUsersMoviesMovieInfo.movieTitle}</span>
+									<a class="btn-floating halfway-fab waves-effect waves-light red">
+										<i id="delete!${currentUserMovie.id}" class="material-icons">remove_circle_outline</i>
+									</a>
+								</div>
+								<div class="card-content">
+									<p>${currentUsersMoviesMovieInfo.cast}</p>
+									<p>Rating : ${currentUserMovie.rating}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					`
+
 				})
 				htmlBuild += "</section>"
 				$("#watchedMoviesDisplay").html(htmlBuild)
