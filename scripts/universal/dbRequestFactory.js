@@ -62,11 +62,11 @@ const requestFactory = Object.create(null, {
 		}
 	},
 	"replace": {
-		value: function (article, id) {
+		value: function (article, id, areaInDb, toChange) {
 			return firebase.auth().currentUser.getIdToken(true)
 				.then(idToken => {
 					return $.ajax({
-						"url": `${firebaseURL}/${id}/.json`,
+						"url": `${firebaseURL +areaInDb}/${id}/${toChange}.json?auth=${idToken}`,
 						"method": "PUT",
 						"data": JSON.stringify(article)
 					})
